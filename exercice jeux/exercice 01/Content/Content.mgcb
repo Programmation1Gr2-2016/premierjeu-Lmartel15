@@ -13,3 +13,9 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin sounds/KONGOS-Come With Me Now (www.mp3fun.cc).mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:sounds/KONGOS-Come With Me Now (www.mp3fun.cc).mp3
+

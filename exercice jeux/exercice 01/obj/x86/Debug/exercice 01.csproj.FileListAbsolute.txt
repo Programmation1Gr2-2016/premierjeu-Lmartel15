@@ -23,3 +23,9 @@ C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\obj\x86\Debug\exercice 01.csprojResolveAssemblyReference.cache
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\obj\x86\Debug\exercice 01.exe
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\obj\x86\Debug\exercice 01.pdb
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\Illuminati.png
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\Mario.png
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\bowser.png
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\mexican tacolord.png
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\trump.png
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\trumpface.png
