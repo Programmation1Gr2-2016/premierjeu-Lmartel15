@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 namespace exercice_01
 {
     /// <summary>
@@ -9,16 +10,20 @@ namespace exercice_01
     /// </summary>
     public class Game1 : Game
     {
+        
+        GameObject[] ennemis = new GameObject[10];        
+        SoundEffect son;
+        SoundEffectInstance again;
+        SoundEffectInstance NOMA;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Rectangle fenetre;
-        GameObject heros;
-        GameObject mechant;
+        GameObject heros;       
         GameObject projectile;
-
+        
         public Game1()
         {
-            SoundEffect son;
+            
 
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -53,32 +58,43 @@ namespace exercice_01
         {
             // Create a new SpriteBatch, which can be used to draw textures.
 
-           
+            
+
+
+            Song song = Content.Load<Song>("songs\\NOMA-BrainPower");           
+            MediaPlayer.Play(song);
+
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             fenetre = graphics.GraphicsDevice.Viewport.Bounds;
             fenetre.Width = graphics.GraphicsDevice.DisplayMode.Width;
             fenetre.Height = graphics.GraphicsDevice.DisplayMode.Height;
 
-            Song = Content.Load<Song>("Sounds\\Musique");
-            MediaPlayer.Play(song);
+            for (int i = 0; i < ennemis.Length; i++)
+            {
+                ennemis[i] = new GameObject();
+                ennemis[i].estVivant = true;
+                ennemis[i].vitesse = 10;
+                ennemis[i].sprite = Content.Load<Texture2D>("bowser.png");
+                ennemis[i].position = ennemis[i].sprite.Bounds;
+                ennemis[i].position.X = ennemis[i].sprite.Bounds.Width * i;
 
-            mechant = new GameObject();
-            mechant.estVivant = true;
-            mechant.vitesse = 5;
-            mechant.sprite = Content.Load<Texture2D>("trump.png");
-            mechant.position = mechant.sprite.Bounds;
+                //ennemis[i].direction.X = r.Next(-4, 5);
+                //ennemis[i].direction.Y = r.Next(-4, 5);
+
+            }
 
             projectile = new GameObject();
             projectile.estVivant = false;
-            projectile.vitesse = 12;
+            projectile.vitesse =10;
             projectile.sprite = Content.Load<Texture2D>("trumpface.png");
             projectile.position = projectile.sprite.Bounds;
+
             
 
             heros = new GameObject();
             heros.estVivant = true;
-            heros.vitesse = 8;
+            heros.vitesse = 15;
             heros.sprite = Content.Load<Texture2D>("mario.png");
             heros.position = heros.sprite.Bounds;
 
@@ -129,9 +145,9 @@ namespace exercice_01
             }
 
             base.Update(gameTime);
-            UpdateHeros();
-            updatemechant();
+            UpdateHeros();            
             Updateprojectile();
+            Updateennemis();
         }
         protected void UpdateHeros()
         {
@@ -155,47 +171,61 @@ namespace exercice_01
             
         }
 
-
-        protected void updatemechant()
+        protected void Updateennemis()
         {
-            if (mechant.position.X < fenetre.Left)
+
+
+
+            for (int i = 0; i < ennemis.Length; i++)
             {
-                mechant.position.X += mechant.vitesse;
-                dir = 0;
-            }
-            else if (mechant.position.X + mechant.sprite.Bounds.Width > fenetre.Right)
-            {
-                mechant.position.X -= mechant.vitesse;
-                dir = 1;
-            }
-            else if (dir == 0)
-            {
-                mechant.position.X += mechant.vitesse;
-            }
-            else if (dir == 1)
-            {
-                mechant.position.X -= mechant.vitesse;
+
+                
+                if (ennemis[i].position.X < fenetre.Left)
+                {
+                    ennemis[i].position.X = fenetre.Left;
+                }
+                else if (ennemis[i].position.X + ennemis[i].sprite.Bounds.Width > fenetre.Right)
+                {
+                    ennemis[i].position.X = fenetre.Right - ennemis[i].sprite.Bounds.Width;
+
+                }
+                else if (ennemis[i].position.Y + ennemis[i].sprite.Bounds.Height > fenetre.Bottom)
+                {
+                    ennemis[i].position.Y = fenetre.Bottom - ennemis[i].sprite.Bounds.Height;
+                }
+                else if (ennemis[i].position.Y < fenetre.Top)
+                {
+                    ennemis[i].position.Y = fenetre.Top;
+                }
+                ennemis[i].position.X += (int)ennemis[i].direction.X;
+                ennemis[i].position.Y += (int)ennemis[i].direction.Y;
+
             }
 
-        }
-        
+
+        }      
             protected void Updateprojectile()
         {
 
+            for (int i = 0; i < ennemis.Length; i++)
+            {
 
 
-            if (projectile.position.Y  > fenetre.Bottom)
-            {
-                projectile.estVivant=false;
-            }
-             if (projectile.estVivant)
-            {
-                projectile.position.Y += projectile.vitesse;
-            }
-            if (!projectile.estVivant)
-            {
-                projectile.estVivant = true;
-                projectile.position = mechant.position;
+                
+                if (projectile.position.Y > fenetre.Bottom)
+                {
+                    projectile.estVivant = false;
+                }
+                if (projectile.estVivant)
+                {
+                    projectile.position.Y += projectile.vitesse;
+                }
+                if (!projectile.estVivant)
+                {
+                    projectile.position = ennemis[i].position;
+                    projectile.estVivant = true;
+
+                }
             }
         }
           
@@ -212,8 +242,14 @@ namespace exercice_01
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             spriteBatch.Draw(heros.sprite, heros.position, Color.White);
-         
-            spriteBatch.Draw(mechant.sprite, mechant.position, Color.White);
+
+            for (int i = 0; i < ennemis.Length; i++)
+            {
+                
+                spriteBatch.Draw(ennemis[i].sprite, ennemis[i].position, Color.White);
+            }
+
+            
             if (projectile.estVivant)
             {
                 spriteBatch.Draw(projectile.sprite, projectile.position, Color.White);

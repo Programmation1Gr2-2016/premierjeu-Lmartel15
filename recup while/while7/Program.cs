@@ -12,17 +12,24 @@ namespace while7
         {
             Random rnd = new Random();
             int compteur = 1;
-            int x = 0;
-            int y = 2;
+            int compteur0 = 0;
+            int compteur1 = 0;
 
             while (compteur <= 100)
             {
                 
-                int nombre = rnd.Next(x,y);
+                int nombre = rnd.Next(0,2);
                 Console.WriteLine(nombre);
                 compteur++;
-               
+                if (nombre==0)
+                {
+                    compteur0++;
+                }
 
+               else
+                {
+                    compteur1++;
+                }
             }
             
 

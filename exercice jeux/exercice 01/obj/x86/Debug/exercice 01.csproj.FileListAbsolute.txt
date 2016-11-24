@@ -20,12 +20,18 @@ C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\SharpDX.RawInput.xml
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
-C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\obj\x86\Debug\exercice 01.csprojResolveAssemblyReference.cache
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\obj\x86\Debug\exercice 01.exe
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\obj\x86\Debug\exercice 01.pdb
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\Illuminati.png
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\Mario.png
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\bowser.png
-C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\mexican tacolord.png
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\trump.png
 C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\trumpface.png
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\sounds\KONGOS-Come With Me Now (www.mp3fun.cc).wma
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\sounds\KONGOS-Come With Me Now (www.mp3fun.cc).xnb
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\songs\again.mp3
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\songs\NOMA-BrainPower.mp3
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\songs\again.wma
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\songs\again.xnb
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\songs\NOMA-BrainPower.wma
+C:\Users\Utilisateur\Desktop\github\premierjeu-Lmartel15\exercice jeux\exercice 01\bin\Windows\x86\Debug\Content\songs\NOMA-BrainPower.xnb
